@@ -1,0 +1,8 @@
+<h1>Page de tous les produits</h1>
+<ul>
+  <% @products.each do |product| %>
+    <li><h4><%= link_to product.name, product_path(product) %></h4>
+    <%= product.description %></li>
+  <% end %>
+</ul>
+<%= link_to "create a product", new_product_path  %>
